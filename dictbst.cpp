@@ -4,6 +4,8 @@
 //  Also find how many maximum comparisons may require for finding any keyword.
 //   Use Binary Search Tree for implementation.
 
+//todo : delete keyword, ascending order with inorder, timecomplexty;
+
 #include<iostream>
 #include<string>
 #include<cstring>
@@ -19,6 +21,7 @@ struct node{
         this->left = this->right = NULL;
 
     }
+    void update();
 };
 
 
@@ -76,6 +79,21 @@ void search(node *root, char *word){
 
 }
 
+void update(node *root, char *word){
+    if(root == NULL){
+        cout<<"Word not found"<<endl;
+        return;
+    }
+    if(strcmp(root->word, word) == 0){
+        cout<<"Enter updated word : ";cin>>root->word;
+        cout<<"Enter it's meaning : ";cin>>root->meaning;
+    }else if(strcmp(root->word,word)<0){
+        update(root->left,word);
+    }else{
+        update(root->right,word);
+    }
+}
+
 int main(){
     node *root = NULL;
     cout<<"Inserting"<<endl;
@@ -94,6 +112,9 @@ int main(){
     }
     cout<<">>>>>>>>perorder"<<endl;
     preorder(root);
+    cout<<">>>>>>>>update"<<endl;
+    cout<<"Enter word to update: ";char u[20];cin>>u;
+    update(root,u);
     cout<<">>>>>>>>Inorder"<<endl;
     inorder(root);
     cout<<">>>>>>>>postorder"<<endl;
