@@ -15,10 +15,10 @@ void floyd(int b[][4]){
         }
     }
     for(i=0 ; i<4; i++){
-        cout<<"\nMinimum cost with respect to Node :"<<i<<endl;
+        cout<<"\nMinimum cost with respect to Node :"<<i<<" : ";
         for(j=0 ; j<4; j++){
             cout<<b[i][j]<<"    ";
-        }
+        }cout<<endl;
     }
 }
 

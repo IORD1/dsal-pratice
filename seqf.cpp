@@ -73,7 +73,7 @@ class file{
             int flag = 0;
             int r;
             cout<<"Enter the rollNo. to be searched : ";cin>>r;
-            fp.open("stu.dat",sizeof(s));
+            fp.open("stu.dat",ios::in);
             while(!fp.eof()){
                 fp.read((char *)&s, sizeof(s));
                 if(!fp.eof() && s.roll == r){
@@ -112,7 +112,7 @@ class file{
             fp.close();
         }
 
-        void delete(){
+        void delete1(){
             student s;
             int flag = 0;
             fstream fp1;

@@ -79,6 +79,7 @@ void search(node *root, char *word){
 
 }
 
+
 void update(node *root, char *word){
     if(root == NULL){
         cout<<"Word not found"<<endl;

@@ -47,7 +47,7 @@ int main(){
     }
 
     cout<<endl;
-    //BFS startes here
+    //DFS startes here
     int visited1[10],visit1[10],stk[10],top;
     cout<<"Enter starting vertiex : ";cin>>v;
     cout<<v<<" ";

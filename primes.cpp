@@ -20,6 +20,7 @@ class Office{
         void primes();
 };
 
+
 void Office::input(){
     cout<<"Enter the Number offices : ";cin>>n;
     cout<<"Enter the names of the offices "<<endl;
